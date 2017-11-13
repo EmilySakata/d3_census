@@ -7,6 +7,7 @@ The correlation with a scatter plot and embed the graphic into an .html file wil
 
 ![ScatterPlot.png] (https://github.com/EmilySakata/blob/master/d3_census/ScatterPlot.png)
 
+![bar.png](https://github.com/EmilySakata/d3_census/blob/master/ScatterPlot.png)
 
 
 
