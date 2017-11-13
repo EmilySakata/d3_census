@@ -5,6 +5,11 @@
 This project plots the census data to identify correlation between two data variables, each measured state by state and taken from different data sources. 
 The correlation with a scatter plot and embed the graphic into an .html file will veisualize the corrolation to identify meaningful observation. 
 
+![ScatterPlot.png (https://github.com/EmilySakata/d3_census/ScatterPlot.png)
+
+
+
+
 Following steps were taken to visualize the data.
 
 1) Data gathering
