@@ -31,6 +31,9 @@ Scatter plot has:
 
 Embed it in index.html with an iframe to plot your d3 scatter plot. 
 
+In order to execute the html, run the server localy by using the following command in your terminal
+-m http.server <local host address>
+
 
 ## technology used
 
