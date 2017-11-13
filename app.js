@@ -29,8 +29,8 @@ d3.csv("sample_data.csv", function(err, sample_data) {
   if (err) throw err;
 
   sample_data.forEach(function(data) {
-    data.Locationdesc = +data.Locationdesc;
-    data.Locationabbr = +data.Locationabbr;
+    data.Locationdesc = String(data.Locationdesc);
+    data.Locationabbr = String(data.Locationabbr);
     data.noHealthcareCoverage = +data.noHealthcareCoverage;
     data.noDrVisitLast12Months = +data.noDrVisitLast12Months;
   });
@@ -75,7 +75,6 @@ d3.csv("sample_data.csv", function(err, sample_data) {
   xLinearScale.domain([xMin, xMax]);
   yLinearScale.domain([0, yMax]);
 
- 
 
  chart
     .selectAll("circle")
@@ -92,15 +91,20 @@ d3.csv("sample_data.csv", function(err, sample_data) {
     .attr("fill", "#ADD8E6");
 
 // Include state abbreviations in the circles.
-  chart.selectAll("circle")
+  chart.selectAll("text")
+    .data(sample_data)
+    .enter()
     .append("text")
+    .style("font-size", 8)
+    .style("font-family", "sans-serif")
+    .style("text-anchor", "middle")
     .attr("dx", function(data, index) {
       return xLinearScale(+data[currentAxisLabelX]);
     })
     .attr("dy", function(data, index) {
       return yLinearScale(data.noDrVisitLast12Months);
     })
-    .text(function (data){
+    .text(function (data, index){
     return data.Locationabbr;
     });
 
